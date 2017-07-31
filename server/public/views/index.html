@@ -9,15 +9,20 @@
   </head>
   <body ng-app="messageApp">
     <h1>Write a message, woot!</h1>
+
     <div ng-controller="MessageController as mc">
+
+      <!-- user input section -->
       <input ng-model="mc.message.name" type="text" placeholder="Name">
       <input ng-model="mc.message.message" type="text" placeholder="Message">
       <button ng-click="mc.addMessage()">Submit</button>
 
+      <!--output section - ngrepeat through db array and display messages on DOM -->
       <div ng-repeat="message in mc.storedInput">
         <p><b>Name:{{message.name}}</p>
         <p><b>Message:{{message.message}}</p>
       </div>
-    </div>
+      
+    </div> <!-- end controller -->
   </body>
 </html>

@@ -1,3 +1,5 @@
+//message schema/ blueprint for data formatting
+
 //requires
 var mongoose = require('mongoose');
 //using Schema as a constructor so needs to be capitalized

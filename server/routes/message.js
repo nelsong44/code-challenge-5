@@ -1,3 +1,5 @@
+//server-side message route
+
 //requires
 var express = require('express');
 var router = express.Router();

@@ -1,4 +1,4 @@
-//route- retrieve and display static html file on page load
+//server-side route - retrieve and display static html file on page load
 var express = require('express');
 var router = express.Router();
 var path = require('path');

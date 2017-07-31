@@ -4,15 +4,18 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
+
+//require routes
 var index = require('./routes/index');
 var message = require('./routes/message.js');
 
 app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json()); // needed for angular requests
-//source route
+
+//source routes
 app.use('/', index);
-//set var equal to db collection
 app.use('/messages', message);
+
 //db
 var databaseUri = 'mongodb://localhost:27017/antares';
 //connect to db
@@ -25,7 +28,6 @@ mongoose.connection.on('connected', function() {
 mongoose.connection.on('error', function(err) {
   console.log('mongoose connection error: ', err);
 });//end connection error
-
 
 //set default port and spin up server to listen
 app.set('port', process.env.PORT || 5000);

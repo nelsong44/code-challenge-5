@@ -1,3 +1,5 @@
+//client-side message route
+
 //create message controller
 app.controller('MessageController', function($http) {
   console.log('MessageController');
