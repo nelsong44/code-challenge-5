@@ -1,0 +1,12 @@
+{
+  "name": "code-challeng-5",
+  "version": "1.0.0",
+  "description": "Code Challenge 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "author": "Miles Nelson",
+  "license": "ISC"
+}
