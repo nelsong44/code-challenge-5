@@ -1,0 +1,10 @@
+//route- retrieve and display static html file on page load
+var express = require('express');
+var router = express.Router();
+var path = require('path');
+
+router.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/views/index.html'));
+});
+
+module.exports = router;

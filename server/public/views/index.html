@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/controllers/message.controller.js"></script>
+    <title>Code Challenge 5</title>
+  </head>
+  <body ng-app="messageApp">
+    <h1>Write a message, woot!</h1>
+    <div ng-controller="MessageController as mc">
+      <input ng-model="mc.message.name" type="text" placeholder="Name">
+      <input ng-model="mc.message.message" type="text" placeholder="Message">
+      <button ng-click="mc.addMessage()">Submit</button>
+
+      <div ng-repeat="message in mc.storedInput">
+        <p><b>Name:{{message.name}}</p>
+        <p><b>Message:{{message.message}}</p>
+      </div>
+    </div>
+  </body>
+</html>

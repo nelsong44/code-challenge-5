@@ -8,5 +8,13 @@
     "start": "node server/server.js"
   },
   "author": "Miles Nelson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "path": "^0.12.7"
+  }
 }
